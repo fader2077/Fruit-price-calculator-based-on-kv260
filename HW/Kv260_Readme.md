@@ -95,7 +95,7 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
 
 2. Pytorch 
 
-    安裝Vitis AI環境後，在環境內clone yolov5 並 pip install -r requirement.txt
+    在Vitis AI環境內clone yolov5 並執行 pip install -r requirement.txt
    
     需要先將pytorch重新安裝
     
