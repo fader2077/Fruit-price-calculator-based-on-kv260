@@ -5,6 +5,7 @@
 - Ubuntu Operating System
 - Ubuntu account
 - Vitis ai 2.5 environment
+- KV260 Board
 
 ## Models Training
 1. 激活函數修改
