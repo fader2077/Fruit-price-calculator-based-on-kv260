@@ -101,7 +101,9 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
     ```
     
     ```bash
-    pip install torch==1.10.0 torchvision==0.11.0 ultralytics==8.0.117
+    pip install torch==1.10.0
+    pip install torchvision==0.11.2
+    pip install ultralytics==8.0.117
     ```
 3. 修改yolo.py
 
