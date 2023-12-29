@@ -95,7 +95,9 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
 
 2. Pytorch 
 
-    安裝Vitis AI環境後，在環境內clone yolov5 並 pip install -r requirement.txt，環境內的pytorch版本會有問題，在2.5的環境下，需要先將pytorch uninstall後重新安裝
+    安裝Vitis AI環境後，在環境內clone yolov5 並 pip install -r requirement.txt
+   
+    需要先將pytorch重新安裝
     
     ```bash
     pip uninstall torch torchvision    
@@ -106,7 +108,7 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
     pip install torchvision==0.11.2
     pip install ultralytics==8.0.117
     ```
-3. 修改yolo.py
+4. 修改yolo.py
 
     这里就需要从代码层面来分析yolov5模型的特征提取过程，整个特征提取过程都是直接使用pytorch的torch张量的相关算子对数据进行处理的，但是在检测层，有一段对最终的三层特征进行处理的代码没有使用torch张量的相关算子，所以在对模型做量化时，需要注释掉这一段代码，并将其添加在检测函数中。该代码位于yolo.py文件的Detect类中，如下所示：
     ### 修改前
@@ -144,7 +146,7 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
             x[i] = x[i].view(bs, self.na, self.no, ny, nx).permute(0, 1, 3, 4, 2).contiguous()
         return x
     ```
-4. 將訓練好的模型進行量化
+5. 將訓練好的模型進行量化
 
     [GO HERE (┬┬﹏┬┬)](https://github.com/Xilinx/Vitis-AI-Tutorials/blob/1.4/Design_Tutorials/09-mnist_pyt/files/quantize.py)
     ```bash
@@ -243,7 +245,7 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
     if __name__ == '__main__':
         run_main()
     ```
-5. Model Compilation
+6. Model Compilation
 
     执行python文件来生成量化配置
     ```bash
