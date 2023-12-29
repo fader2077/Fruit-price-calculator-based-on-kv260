@@ -1,12 +1,3 @@
----
-marp: true
----
-
-![GitHub stars](https://img.shields.io/github/stars/fader2077/Fruit-calculator-based-on-kv260?style=social)
-![GitHub forks](https://img.shields.io/github/forks/fader2077/Fruit-calculator-based-on-kv260?style=social)
-![GitHub](https://img.shields.io/github/license/fader2077/Fruit-calculator-based-on-kv260)
-![GitHub last commit](https://img.shields.io/github/last-commit/fader2077/Fruit-calculator-based-on-kv260)
-
 # 水果總價計算機
 
 ## 1	設計動機
