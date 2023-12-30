@@ -303,5 +303,9 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
 
 [https://lgyserver.top/index.php/2023/05/08/xilinx-vitis-ai%E9%87%8F%E5%8C%96%E9%83%A8%E7%BD%B2yolov5%E8%87%B3dpu-pynq/](https://lgyserver.top/index.php/2023/05/08/xilinx-vitis-ai%E9%87%8F%E5%8C%96%E9%83%A8%E7%BD%B2yolov5%E8%87%B3dpu-pynq/)
 
+[https://xilinx.eetrend.com/blog/2022/100565582.html](https://xilinx.eetrend.com/blog/2022/100565582.html)
+
+[https://blog.csdn.net/m0_45287781/article/details/127947918](https://blog.csdn.net/m0_45287781/article/details/127947918)
+
 [https://github.com/Xilinx/Vitis-AI-Tutorials/blob/1.4/Design_Tutorials/09-mnist_pyt/files/quantize.py](https://github.com/Xilinx/Vitis-AI-Tutorials/blob/1.4/Design_Tutorials/09-mnist_pyt/files/quantize.py)
 
