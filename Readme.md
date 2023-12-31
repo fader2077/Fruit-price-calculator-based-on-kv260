@@ -4,7 +4,7 @@
 
 ![](https://img.shields.io/badge/python%20-0080FF?style=plastic&logo=python&logoColor=E1E100)
 ![](https://img.shields.io/badge/Xilinx-Vitis%20Ai%20Kv260%20%20-750000?style=plastic&logo=AMD&logoColor=000000)
-![](https://img.shields.io/badge/jupyter%20notebook%20-F75000?style=plastic&logo=jupyter&logoColor=F75000)
+![](https://img.shields.io/badge/jupyter%20notebook%20-EA7500?style=plastic&logo=jupyter&logoColor=4EFEB3)
 ![](https://img.shields.io/badge/ubuntu%20-CE0000%09?style=plastic&logo=ubuntu&logoColor=CE0000%09)
 ![](https://img.shields.io/badge/Docker%20-EEEEEE?style=plastic&logo=docker&logoColor=0080FF)
 ![](https://img.shields.io/badge/ultralytics%20%20-D3A4FF?style=plastic&logo=pytorch&logoColor=000093)
