@@ -1,5 +1,15 @@
 # 基於KV260之水果總價計算機
 
+## Tech Stack
+
+![](https://img.shields.io/badge/python%20-0080FF?style=plastic&logo=python&logoColor=E1E100)
+![](https://img.shields.io/badge/Xilinx-Vitis%20Ai%20Kv260%20%20-750000?style=plastic&logo=AMD&logoColor=000000)
+![](https://img.shields.io/badge/jupyter%20notebook%20-F75000?style=plastic&logo=jupyter&logoColor=F75000)
+![](https://img.shields.io/badge/ubuntu%20-CE0000%09?style=plastic&logo=ubuntu&logoColor=CE0000%09)
+![](https://img.shields.io/badge/Docker%20-EEEEEE?style=plastic&logo=docker&logoColor=0080FF)
+![](https://img.shields.io/badge/ultralytics%20%20-D3A4FF?style=plastic&logo=pytorch&logoColor=000093)
+![](https://img.shields.io/badge/Nvidia%20-EEEEEE?style=plastic&logo=nvidia&logoColor=28FF28)
+
 ## 1	設計動機
 現代人因為生活步調快速，較沒有時間去購物同時可能也較缺乏健康來源。所以我們希望可以設計一個水果快速辨識並計算其價格系統。以便加速結帳時間。
 
@@ -17,8 +27,3 @@
 
 [HW](HW/Kv260_Readme.md)
 
-![](https://img.shields.io/badge/python%20-0080FF?style=plastic&logo=python&logoColor=E1E100)
-![](https://img.shields.io/badge/xilinx-Vitis%20Ai%20-750000%09?style=plastic&logo=amd&logoColor=000000)
-![](https://img.shields.io/badge/jupyter%20notebook%20-F75000?style=plastic&logo=jupyter&logoColor=F75000)
-![](https://img.shields.io/badge/ubuntu%20-CE0000%09?style=plastic&logo=ubuntu&logoColor=CE0000%09)
-![](https://img.shields.io/badge/Docker%20-EEEEEE?style=plastic&logo=docker&logoColor=0080FF)
