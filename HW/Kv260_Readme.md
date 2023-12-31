@@ -21,49 +21,49 @@
     in common.py
     ```bash
     class Conv(nn.Module):
-    # Standard convolution with args(ch_in, ch_out, kernel, stride, padding, groups, dilation, activation)
+        # Standard convolution with args(ch_in, ch_out, kernel, stride, padding, groups, dilation, activation)
         default_act = nn.LeakyReLU(0.1, inplace=True)  # THIS
-
-    ---------------------分隔線----------------------
-
-    class BottleneckCSP(nn.Module):
-    # CSP Bottleneck https://github.com/WongKinYiu/CrossStagePartialNetworks
-    def __init__(self, c1, c2, n=1, shortcut=True, g=1, e=0.5):  # ch_in, ch_out, number, shortcut, groups, expansion<mark style="background-color: lightblue">Marked text</mark>
-        super().__init__()
-        c_ = int(c2 * e)  # hidden channels
-        self.cv1 = Conv(c1, c_, 1, 1)
-        self.cv2 = nn.Conv2d(c1, c_, 1, 1, bias=False)
-        self.cv3 = nn.Conv2d(c_, c_, 1, 1, bias=False)
-        self.cv4 = Conv(2 * c_, c2, 1, 1)
-        self.bn = nn.BatchNorm2d(2 * c_)  # applied to cat(cv2, cv3)
-        self.act = nn.LeakyReLU(0.1, inplace=True) #THIS
-        self.m = nn.Sequential(*(Bottleneck(c_, c_, shortcut, g, e=1.0) for _ in range(n)))
+    
+        ---------------------分隔線----------------------
+    
+        class BottleneckCSP(nn.Module):
+        # CSP Bottleneck https://github.com/WongKinYiu/CrossStagePartialNetworks
+        def __init__(self, c1, c2, n=1, shortcut=True, g=1, e=0.5):  # ch_in, ch_out, number, shortcut, groups, expansion<mark style="background-color: lightblue">Marked text</mark>
+            super().__init__()
+            c_ = int(c2 * e)  # hidden channels
+            self.cv1 = Conv(c1, c_, 1, 1)
+            self.cv2 = nn.Conv2d(c1, c_, 1, 1, bias=False)
+            self.cv3 = nn.Conv2d(c_, c_, 1, 1, bias=False)
+            self.cv4 = Conv(2 * c_, c2, 1, 1)
+            self.bn = nn.BatchNorm2d(2 * c_)  # applied to cat(cv2, cv3)
+            self.act = nn.LeakyReLU(0.1, inplace=True) #THIS
+            self.m = nn.Sequential(*(Bottleneck(c_, c_, shortcut, g, e=1.0) for _ in range(n)))
     ```
     in experimental.py
     ```bash
     class MixConv2d(nn.Module):
-    # Mixed Depth-wise Conv https://arxiv.org/abs/1907.09595
-    def __init__(self, c1, c2, k=(1, 3), s=1, equal_ch=True):  # ch_in, ch_out, kernel, stride, ch_strategy
-        super().__init__()
-        n = len(k)  # number of convolutions
-        if equal_ch:  # equal c_ per group
-            i = torch.linspace(0, n - 1E-6, c2).floor()  # c2 indices
-            c_ = [(i == g).sum() for g in range(n)]  # intermediate channels
-        else:  # equal weight.numel() per group
-            b = [c2] + [0] * n
-            a = np.eye(n + 1, n, k=-1)
-            a -= np.roll(a, 1, axis=1)
-            a *= np.array(k) ** 2
-            a[0] = 1
-            c_ = np.linalg.lstsq(a, b, rcond=None)[0].round()  # solve for equal weight indices, ax = b
-
-        self.m = nn.ModuleList([
-            nn.Conv2d(c1, int(c_), k, s, k // 2, groups=math.gcd(c1, int(c_)), bias=False) for k, c_ in zip(k, c_)])
-        self.bn = nn.BatchNorm2d(c2)
-        self.act = nn.LeakyReLU(0.1, inplace=True) #THIS
-
-    def forward(self, x):
-        return self.act(self.bn(torch.cat([m(x) for m in self.m], 1)))
+        # Mixed Depth-wise Conv https://arxiv.org/abs/1907.09595
+        def __init__(self, c1, c2, k=(1, 3), s=1, equal_ch=True):  # ch_in, ch_out, kernel, stride, ch_strategy
+            super().__init__()
+            n = len(k)  # number of convolutions
+            if equal_ch:  # equal c_ per group
+                i = torch.linspace(0, n - 1E-6, c2).floor()  # c2 indices
+                c_ = [(i == g).sum() for g in range(n)]  # intermediate channels
+            else:  # equal weight.numel() per group
+                b = [c2] + [0] * n
+                a = np.eye(n + 1, n, k=-1)
+                a -= np.roll(a, 1, axis=1)
+                a *= np.array(k) ** 2
+                a[0] = 1
+                c_ = np.linalg.lstsq(a, b, rcond=None)[0].round()  # solve for equal weight indices, ax = b
+    
+            self.m = nn.ModuleList([
+                nn.Conv2d(c1, int(c_), k, s, k // 2, groups=math.gcd(c1, int(c_)), bias=False) for k, c_ in zip(k, c_)])
+            self.bn = nn.BatchNorm2d(c2)
+            self.act = nn.LeakyReLU(0.1, inplace=True) #THIS
+    
+        def forward(self, x):
+            return self.act(self.bn(torch.cat([m(x) for m in self.m], 1)))
     ```
 
 2. Training Yolov5 model
