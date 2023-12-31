@@ -3,6 +3,7 @@
 ## Tech Stack
 
 ![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
+![Google](https://img.shields.io/badge/google-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
 ![](https://img.shields.io/badge/python%20-0080FF?style=plastic&logo=python&logoColor=E1E100)
 ![](https://img.shields.io/badge/Xilinx-Vitis%20Ai%20Kv260%20%20-750000?style=plastic&logo=AMD&logoColor=000000)
