@@ -17,8 +17,8 @@
 
 [HW](HW/Kv260_Readme.md)
 
-![](https://img.shields.io/badge/python%20-E1E100?style=plastic&logo=python&logoColor=000093)
-![](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white)
-![](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black)
-![](https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=Bootstrap&logoColor=white)
-![](https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white)
+![](https://img.shields.io/badge/python%20-0080FF?style=plastic&logo=python&logoColor=E1E100)
+![](https://img.shields.io/badge/xilinx-Vitis%20Ai%20-750000%09?style=plastic&logo=amd&logoColor=000000)
+![](https://img.shields.io/badge/jupyter%20notebook%20-F75000?style=plastic&logo=jupyter&logoColor=F75000)
+![](https://img.shields.io/badge/ubuntu%20-CE0000%09?style=plastic&logo=ubuntu&logoColor=CE0000%09)
+![](https://img.shields.io/badge/Docker%20-EEEEEE?style=plastic&logo=docker&logoColor=0080FF)
