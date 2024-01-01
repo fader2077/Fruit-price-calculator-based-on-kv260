@@ -11,7 +11,6 @@
 ![](https://img.shields.io/badge/ubuntu%20-CE0000%09?style=plastic&logo=ubuntu&logoColor=CE0000%09)
 ![](https://img.shields.io/badge/Docker%20-EEEEEE?style=plastic&logo=docker&logoColor=0080FF)
 ![](https://img.shields.io/badge/ultralytics%20%20-D3A4FF?style=plastic&logo=pytorch&logoColor=000093)
-![](https://img.shields.io/badge/Nvidia%20-EEEEEE?style=plastic&logo=nvidia&logoColor=28FF28)
 ## 1	設計動機
 現代人因為生活步調快速，較沒有時間去購物同時可能也較缺乏健康來源。所以我們希望可以設計一個水果快速辨識並計算其價格系統。以便加速結帳時間。
 
