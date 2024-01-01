@@ -97,7 +97,7 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
 
     在Vitis AI環境內clone yolov5 並執行 pip install -r requirement.txt
    
-    需要先將pytorch重新安裝
+    之後需要將pytorch重新安裝
     
     ```bash
     pip uninstall torch torchvision    
