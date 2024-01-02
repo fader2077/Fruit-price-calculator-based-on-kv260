@@ -309,3 +309,7 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
 
 [https://github.com/Xilinx/Vitis-AI-Tutorials/blob/1.4/Design_Tutorials/09-mnist_pyt/files/quantize.py](https://github.com/Xilinx/Vitis-AI-Tutorials/blob/1.4/Design_Tutorials/09-mnist_pyt/files/quantize.py)
 
+[https://blog.csdn.net/qq_41660112/article/details/132208984](https://blog.csdn.net/qq_41660112/article/details/132208984)
+
+
+
