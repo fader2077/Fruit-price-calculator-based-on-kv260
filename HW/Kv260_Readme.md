@@ -251,10 +251,13 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
     ```bash
     python quantize.py -q calib    
     ```
+    
     运行test来生成xmodel
     ```bash
     python quantize.py -q test -b 1
     ```
+    ![image](https://github.com/fader2077/Fruit-price-calculator-based-on-kv260/assets/91887018/8ed4243f-8f77-419a-b63e-4d7e9cf1990b)
+
     使用xilinx提供的compiler去把这个xmodel编译成DPU支持的，基于XIR的xmodel，运行如下指令：
     ```bash
     vai_c_xir -x ./build/quant_model/DetectMultiBackend_int.xmodel -a /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json -o ./ -n my_model
