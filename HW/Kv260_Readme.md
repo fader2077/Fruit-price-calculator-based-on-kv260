@@ -294,7 +294,7 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
     ```
 3. Deploy YOLOV5 (≧∇≦)ﾉ
 
-    沒什麼特別的，直接套用[dpu_yolov5_fruit_calculator.ipynb](https://github.com/fader2077/Fruit-price-calculator-based-on-kv260/blob/main/HW/dpu_yolov5_fruit_calculator.ipynb)即可，記得檔案路徑要改一下
+    沒什麼特別的，直接套用[dpu_yolov5_fruit_calculator.ipynb](https://github.com/fader2077/Fruit-price-calculator-based-on-kv260/blob/main/HW/dpu_yolov5_fruit_calculator_full.ipynb)即可，記得檔案路徑要改一下
     
 
 # Reference
