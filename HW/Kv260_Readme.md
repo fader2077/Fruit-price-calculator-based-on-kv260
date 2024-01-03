@@ -259,6 +259,7 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
     ```bash
     vai_c_xir -x ./build/quant_model/DetectMultiBackend_int.xmodel -a /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json -o ./ -n my_model
     ```
+    ![image](https://github.com/fader2077/Fruit-price-calculator-based-on-kv260/assets/91887018/ed543844-6b78-40e4-b371-f2578e738e76)
 ## Deploy
 1. 部署前准备
     
