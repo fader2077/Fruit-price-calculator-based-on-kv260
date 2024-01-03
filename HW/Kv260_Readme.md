@@ -251,7 +251,8 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
     ```bash
     python quantize.py -q calib    
     ```
-    
+    ![image](https://github.com/fader2077/Fruit-price-calculator-based-on-kv260/assets/91887018/0a7e4fb0-b1e2-43b7-b203-dd39c25b5b25)
+
     运行test来生成xmodel
     ```bash
     python quantize.py -q test -b 1
