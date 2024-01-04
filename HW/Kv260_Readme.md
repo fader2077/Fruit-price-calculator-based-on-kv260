@@ -301,6 +301,16 @@ yolov5](https://github.com/ultralytics/yolov5/tree/master)
     沒什麼特別的，直接套用[dpu_yolov5_fruit_calculator.ipynb](https://github.com/fader2077/Fruit-price-calculator-based-on-kv260/blob/main/HW/dpu_yolov5_fruit_calculator_full.ipynb)即可，記得檔案路徑要改一下
     
 
+
+https://github.com/fader2077/Fruit-price-calculator-based-on-kv260/assets/91887018/06011c02-b442-414e-999b-af0844e30918
+
+
+
+https://github.com/fader2077/Fruit-price-calculator-based-on-kv260/assets/91887018/6247468b-c4d6-4a22-8a4c-60d58bd40b8f
+
+
+
+
 # Reference
 [DPU_yolov3](https://github.com/Xilinx/DPU-PYNQ/blob/master/pynq_dpu/notebooks/dpu_yolov3.ipynb)
 
